@@ -12,3 +12,11 @@ Desktop.ini
 # Temp files
 *.tmp
 *.bak
+
+# Node
+node_modules/
+package.json
+package-lock.json
+
+# Backup originaux (ne pas publier)
+backup/
