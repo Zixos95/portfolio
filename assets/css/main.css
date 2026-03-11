@@ -1,17 +1,14 @@
-/**
+﻿/**
 * Template Name: iPortfolio
 * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
 * Updated: Jun 29 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 *
-* Customized for: Léo Arnould – Administrateur Systèmes & Réseaux
+* 
 */
 
-/*--------------------------------------------------------------
-# Font & Color Variables
---------------------------------------------------------------*/
-/* Fonts */
+
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
@@ -19,7 +16,6 @@
   --mono-font: "Fira Code", "Consolas", "Monaco", monospace;
 }
 
-/* Global Colors – Dark / Tech theme */
 :root { 
   --background-color: #0f1117;
   --default-color: #c5c8d4;
@@ -29,7 +25,6 @@
   --contrast-color: #ffffff;
 }
 
-/* Nav Menu Colors */
 :root {
   --nav-color: #8b8fa3;
   --nav-hover-color: #ffffff;
@@ -54,14 +49,11 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -89,8 +81,7 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
+
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -688,10 +679,8 @@ section,
   background-color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Skill Cards (New)
---------------------------------------------------------------*/
-.skill-card {
+/* comp-box */
+.comp-box {
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   border-radius: 12px;
@@ -702,7 +691,7 @@ section,
   overflow: hidden;
 }
 
-.skill-card::before {
+.comp-box::before {
   content: "";
   position: absolute;
   top: 0;
@@ -712,13 +701,13 @@ section,
   background: linear-gradient(90deg, var(--accent-color), transparent);
 }
 
-.skill-card:hover {
+.comp-box:hover {
   transform: translateY(-5px);
   border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
   box-shadow: 0 10px 30px rgba(0, 180, 216, 0.1);
 }
 
-.skill-card-icon {
+.comp-ico {
   width: 60px;
   height: 60px;
   background: color-mix(in srgb, var(--accent-color), transparent 85%);
@@ -729,25 +718,25 @@ section,
   margin-bottom: 20px;
 }
 
-.skill-card-icon i {
+.comp-ico i {
   font-size: 28px;
   color: var(--accent-color);
 }
 
-.skill-card h4 {
+.comp-box h4 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 15px;
   color: var(--heading-color);
 }
 
-.skill-list {
+.comp-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.skill-list li {
+.comp-list li {
   padding: 6px 0;
   font-size: 14px;
   color: var(--default-color);
@@ -756,19 +745,17 @@ section,
   gap: 8px;
 }
 
-.skill-list li i {
+.comp-list li i {
   color: var(--accent-color);
   font-size: 14px;
 }
 
-/*--------------------------------------------------------------
-# Projects Section (New)
---------------------------------------------------------------*/
+/* projets */
 .projects .section-title h2:after {
   left: 0;
 }
 
-.project-card {
+.pj-card {
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   border-radius: 12px;
@@ -779,7 +766,7 @@ section,
   overflow: hidden;
 }
 
-.project-card::before {
+.pj-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -791,24 +778,24 @@ section,
   transition: opacity 0.3s ease;
 }
 
-.project-card:hover {
+.pj-card:hover {
   transform: translateY(-5px);
   border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
   box-shadow: 0 15px 40px rgba(0, 180, 216, 0.08);
 }
 
-.project-card:hover::before {
+.pj-card:hover::before {
   opacity: 1;
 }
 
-.project-card-header {
+.pj-head {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 18px;
 }
 
-.project-icon {
+.pj-ico {
   width: 50px;
   height: 50px;
   min-width: 50px;
@@ -819,26 +806,26 @@ section,
   justify-content: center;
 }
 
-.project-icon i {
+.pj-ico i {
   font-size: 24px;
   color: var(--accent-color);
 }
 
-.project-card h3 {
+.pj-card h3 {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
   color: var(--heading-color);
 }
 
-.project-tech-badges {
+.pj-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 18px;
 }
 
-.badge-tech {
+.tag {
   background: color-mix(in srgb, var(--accent-color), transparent 88%);
   color: var(--accent-color);
   padding: 4px 12px;
@@ -849,7 +836,7 @@ section,
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
 }
 
-.project-card h5 {
+.pj-card h5 {
   font-size: 14px;
   font-weight: 600;
   color: var(--heading-color);
@@ -858,13 +845,13 @@ section,
   letter-spacing: 0.5px;
 }
 
-.project-list {
+.pj-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.project-list li {
+.pj-list li {
   padding: 5px 0;
   font-size: 14px;
   color: var(--default-color);
@@ -873,21 +860,19 @@ section,
   gap: 8px;
 }
 
-.project-list li i {
+.pj-list li i {
   color: var(--accent-color);
   font-size: 14px;
   margin-top: 3px;
   flex-shrink: 0;
 }
 
-/*--------------------------------------------------------------
-# Homelab Section (New)
---------------------------------------------------------------*/
+/* homelab */
 .homelab .section-title h2:after {
   left: 0;
 }
 
-.homelab-card {
+.lab-block {
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   border-radius: 12px;
@@ -895,7 +880,7 @@ section,
   height: 100%;
 }
 
-.homelab-card h3 {
+.lab-block h3 {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -905,16 +890,16 @@ section,
   gap: 10px;
 }
 
-.homelab-card h3 i {
+.lab-block h3 i {
   color: var(--accent-color);
   font-size: 22px;
 }
 
-.homelab-detail {
+.lab-desc {
   margin-bottom: 25px;
 }
 
-.homelab-badge-main {
+.lab-badge {
   display: inline-block;
   background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 50%));
   color: var(--contrast-color);
@@ -926,27 +911,27 @@ section,
   margin-bottom: 10px;
 }
 
-.homelab-detail p {
+.lab-desc p {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-top: 10px;
 }
 
-.homelab-subtitle {
+.lab-sub {
   font-size: 13px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 18px;
   font-family: var(--mono-font);
 }
 
-.homelab-specs {
+.hw-specs {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 15px;
 }
 
-.homelab-spec-item {
+.hw-spec {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -959,25 +944,25 @@ section,
   font-family: var(--mono-font);
 }
 
-.homelab-spec-item i {
+.hw-spec i {
   color: #10b981;
   font-size: 16px;
   min-width: 20px;
 }
 
-.homelab-vm-grid {
+.vm-grid {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.homelab-vm-list {
+.vm-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.homelab-vm-item {
+.vm-row {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -987,32 +972,32 @@ section,
   border-left: 3px solid var(--accent-color);
 }
 
-.homelab-vm-item i {
+.vm-row i {
   font-size: 24px;
   color: var(--accent-color);
   min-width: 30px;
   text-align: center;
 }
 
-.homelab-vm-item strong {
+.vm-row strong {
   display: block;
   font-size: 14px;
   color: var(--heading-color);
 }
 
-.homelab-vm-item span {
+.vm-row span {
   font-size: 12px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.homelab-services {
+.svc-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
 }
 
-.homelab-service-item {
+.svc-item {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1024,29 +1009,29 @@ section,
   color: var(--default-color);
 }
 
-.homelab-service-item i {
+.svc-item i {
   color: var(--accent-color);
   font-size: 16px;
 }
 
-/* Cyber variant */
-.homelab-service-cyber {
+/* cyber */
+.svc-red {
   border-color: color-mix(in srgb, #ef4444, transparent 75%);
   background: color-mix(in srgb, #ef4444, transparent 92%);
 }
 
-.homelab-service-cyber i {
+.svc-red i {
   color: #ef4444;
 }
 
-/* Docker containers grid */
-.homelab-docker-grid {
+/* docker */
+.dk-grid {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.docker-item {
+.dk-row {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1057,32 +1042,30 @@ section,
   transition: all 0.2s ease;
 }
 
-.docker-item:hover {
+.dk-row:hover {
   background: color-mix(in srgb, #6366f1, transparent 88%);
   transform: translateX(4px);
 }
 
-.docker-item i {
+.dk-row i {
   font-size: 20px;
   color: #6366f1;
   min-width: 26px;
   text-align: center;
 }
 
-.docker-item strong {
+.dk-row strong {
   display: block;
   font-size: 13px;
   color: var(--heading-color);
 }
 
-.docker-item span {
+.dk-row span {
   font-size: 11px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-/*--------------------------------------------------------------
-# Network Diagram (Homelab)
---------------------------------------------------------------*/
+/* network diagram */
 .network-diagram {
   display: flex;
   flex-direction: column;
@@ -1143,7 +1126,7 @@ section,
   font-family: var(--mono-font);
 }
 
-/* Node type colors */
+
 .net-internet {
   border-color: #6366f1;
   background: color-mix(in srgb, #6366f1, transparent 92%);
@@ -1188,7 +1171,7 @@ section,
   color: #10b981;
 }
 
-/* VM color variants in diagram */
+
 .net-vm-docker {
   border-color: #6366f1;
 }
@@ -1260,7 +1243,7 @@ section,
   color: var(--contrast-color);
 }
 
-/* Connectors */
+
 .net-connector {
   display: flex;
   justify-content: center;
@@ -1402,8 +1385,8 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-/* Download CV Button */
-.btn-download-cv {
+
+.dl-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1418,19 +1401,19 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-.btn-download-cv:hover {
+.dl-btn:hover {
   background: transparent;
   color: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 180, 216, 0.3);
 }
 
-.btn-download-cv i {
+.dl-btn i {
   font-size: 18px;
 }
 
-/* View CV Button (secondary) */
-.btn-view-cv {
+
+.open-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1445,26 +1428,26 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-.btn-view-cv:hover {
+.open-btn:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 180, 216, 0.3);
 }
 
-.btn-view-cv i {
+.open-btn i {
   font-size: 18px;
 }
 
-/* CV Viewer Card */
-.cv-viewer-card {
+
+.cv-box {
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   border-radius: 12px;
   padding: 30px;
 }
 
-.cv-viewer-card h3 {
+.cv-box h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1474,19 +1457,19 @@ section,
   gap: 10px;
 }
 
-.cv-viewer-card h3 i {
+.cv-box h3 i {
   color: #ef4444;
   font-size: 24px;
 }
 
-.cv-pdf-embed {
+.cv-frame {
   background: #1a1a2e;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.cv-actions {
+.cv-btns {
   display: flex;
   justify-content: center;
   gap: 15px;
