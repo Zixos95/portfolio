@@ -1,15 +1,4 @@
-﻿/**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*
-* 
-*/
-
-
-:root {
+﻿:root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
@@ -34,8 +23,6 @@
   --nav-dropdown-hover-color: #ffffff;
 }
 
-/* Color Presets */
-
 .light-background {
   --background-color: #121520;
   --surface-color: #1a1e2e;
@@ -52,7 +39,6 @@
 :root {
   scroll-behavior: smooth;
 }
-
 
 body {
   color: var(--default-color);
@@ -80,7 +66,6 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
 
 .php-email-form .error-message {
   display: none;
@@ -132,9 +117,6 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Global Header
---------------------------------------------------------------*/
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -239,9 +221,6 @@ h6 {
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
 .mobile-nav-toggle {
   display: none;
 }
@@ -354,9 +333,6 @@ h6 {
   background-color: rgba(33, 37, 41, 0.03);
 }
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -376,9 +352,6 @@ h6 {
   text-align: center;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
 #preloader {
   position: fixed;
   inset: 0;
@@ -411,9 +384,6 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -445,18 +415,12 @@ h6 {
   bottom: 15px;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -490,9 +454,6 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-/*--------------------------------------------------------------
-# Global Sections
---------------------------------------------------------------*/
 section,
 .section {
   color: var(--default-color);
@@ -501,9 +462,6 @@ section,
   overflow: clip;
 }
 
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
 .section-title {
   padding-bottom: 60px;
   position: relative;
@@ -532,9 +490,6 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -612,9 +567,6 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
@@ -642,9 +594,6 @@ section,
   line-height: 0;
 }
 
-/*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
   display: block;
@@ -679,8 +628,7 @@ section,
   background-color: var(--accent-color);
 }
 
-/* comp-box */
-.comp-box {
+.skill-card {
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   border-radius: 12px;
@@ -691,7 +639,7 @@ section,
   overflow: hidden;
 }
 
-.comp-box::before {
+.skill-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -701,13 +649,13 @@ section,
   background: linear-gradient(90deg, var(--accent-color), transparent);
 }
 
-.comp-box:hover {
+.skill-card:hover {
   transform: translateY(-5px);
   border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
   box-shadow: 0 10px 30px rgba(0, 180, 216, 0.1);
 }
 
-.comp-ico {
+.skill-card-icon {
   width: 60px;
   height: 60px;
   background: color-mix(in srgb, var(--accent-color), transparent 85%);
@@ -718,25 +666,25 @@ section,
   margin-bottom: 20px;
 }
 
-.comp-ico i {
+.skill-card-icon i {
   font-size: 28px;
   color: var(--accent-color);
 }
 
-.comp-box h4 {
+.skill-card h4 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 15px;
   color: var(--heading-color);
 }
 
-.comp-list {
+.skill-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.comp-list li {
+.skill-list li {
   padding: 6px 0;
   font-size: 14px;
   color: var(--default-color);
@@ -745,17 +693,16 @@ section,
   gap: 8px;
 }
 
-.comp-list li i {
+.skill-list li i {
   color: var(--accent-color);
   font-size: 14px;
 }
 
-/* projets */
 .projects .section-title h2:after {
   left: 0;
 }
 
-.pj-card {
+.project-card {
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   border-radius: 12px;
@@ -766,7 +713,7 @@ section,
   overflow: hidden;
 }
 
-.pj-card::before {
+.project-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -778,24 +725,24 @@ section,
   transition: opacity 0.3s ease;
 }
 
-.pj-card:hover {
+.project-card:hover {
   transform: translateY(-5px);
   border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
   box-shadow: 0 15px 40px rgba(0, 180, 216, 0.08);
 }
 
-.pj-card:hover::before {
+.project-card:hover::before {
   opacity: 1;
 }
 
-.pj-head {
+.project-card-header {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 18px;
 }
 
-.pj-ico {
+.project-icon {
   width: 50px;
   height: 50px;
   min-width: 50px;
@@ -806,26 +753,26 @@ section,
   justify-content: center;
 }
 
-.pj-ico i {
+.project-icon i {
   font-size: 24px;
   color: var(--accent-color);
 }
 
-.pj-card h3 {
+.project-card h3 {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
   color: var(--heading-color);
 }
 
-.pj-tags {
+.project-tech-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 18px;
 }
 
-.tag {
+.badge-tech {
   background: color-mix(in srgb, var(--accent-color), transparent 88%);
   color: var(--accent-color);
   padding: 4px 12px;
@@ -836,7 +783,7 @@ section,
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
 }
 
-.pj-card h5 {
+.project-card h5 {
   font-size: 14px;
   font-weight: 600;
   color: var(--heading-color);
@@ -845,13 +792,13 @@ section,
   letter-spacing: 0.5px;
 }
 
-.pj-list {
+.project-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.pj-list li {
+.project-list li {
   padding: 5px 0;
   font-size: 14px;
   color: var(--default-color);
@@ -860,19 +807,18 @@ section,
   gap: 8px;
 }
 
-.pj-list li i {
+.project-list li i {
   color: var(--accent-color);
   font-size: 14px;
   margin-top: 3px;
   flex-shrink: 0;
 }
 
-/* homelab */
 .homelab .section-title h2:after {
   left: 0;
 }
 
-.lab-block {
+.homelab-card {
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   border-radius: 12px;
@@ -880,7 +826,7 @@ section,
   height: 100%;
 }
 
-.lab-block h3 {
+.homelab-card h3 {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -890,16 +836,16 @@ section,
   gap: 10px;
 }
 
-.lab-block h3 i {
+.homelab-card h3 i {
   color: var(--accent-color);
   font-size: 22px;
 }
 
-.lab-desc {
+.homelab-detail {
   margin-bottom: 25px;
 }
 
-.lab-badge {
+.homelab-badge-main {
   display: inline-block;
   background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 50%));
   color: var(--contrast-color);
@@ -911,27 +857,27 @@ section,
   margin-bottom: 10px;
 }
 
-.lab-desc p {
+.homelab-detail p {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-top: 10px;
 }
 
-.lab-sub {
+.homelab-subtitle {
   font-size: 13px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 18px;
   font-family: var(--mono-font);
 }
 
-.hw-specs {
+.homelab-specs {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 15px;
 }
 
-.hw-spec {
+.homelab-spec-item {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -944,25 +890,25 @@ section,
   font-family: var(--mono-font);
 }
 
-.hw-spec i {
+.homelab-spec-item i {
   color: #10b981;
   font-size: 16px;
   min-width: 20px;
 }
 
-.vm-grid {
+.homelab-vm-grid {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.vm-list {
+.homelab-vm-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.vm-row {
+.homelab-vm-item {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -972,32 +918,32 @@ section,
   border-left: 3px solid var(--accent-color);
 }
 
-.vm-row i {
+.homelab-vm-item i {
   font-size: 24px;
   color: var(--accent-color);
   min-width: 30px;
   text-align: center;
 }
 
-.vm-row strong {
+.homelab-vm-item strong {
   display: block;
   font-size: 14px;
   color: var(--heading-color);
 }
 
-.vm-row span {
+.homelab-vm-item span {
   font-size: 12px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.svc-list {
+.homelab-services {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
 }
 
-.svc-item {
+.homelab-service-item {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1009,29 +955,27 @@ section,
   color: var(--default-color);
 }
 
-.svc-item i {
+.homelab-service-item i {
   color: var(--accent-color);
   font-size: 16px;
 }
 
-/* cyber */
-.svc-red {
+.homelab-service-cyber {
   border-color: color-mix(in srgb, #ef4444, transparent 75%);
   background: color-mix(in srgb, #ef4444, transparent 92%);
 }
 
-.svc-red i {
+.homelab-service-cyber i {
   color: #ef4444;
 }
 
-/* docker */
-.dk-grid {
+.homelab-docker-grid {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.dk-row {
+.docker-item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1042,30 +986,29 @@ section,
   transition: all 0.2s ease;
 }
 
-.dk-row:hover {
+.docker-item:hover {
   background: color-mix(in srgb, #6366f1, transparent 88%);
   transform: translateX(4px);
 }
 
-.dk-row i {
+.docker-item i {
   font-size: 20px;
   color: #6366f1;
   min-width: 26px;
   text-align: center;
 }
 
-.dk-row strong {
+.docker-item strong {
   display: block;
   font-size: 13px;
   color: var(--heading-color);
 }
 
-.dk-row span {
+.docker-item span {
   font-size: 11px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-/* network diagram */
 .network-diagram {
   display: flex;
   flex-direction: column;
@@ -1126,7 +1069,6 @@ section,
   font-family: var(--mono-font);
 }
 
-
 .net-internet {
   border-color: #6366f1;
   background: color-mix(in srgb, #6366f1, transparent 92%);
@@ -1170,7 +1112,6 @@ section,
 .net-hypervisor i {
   color: #10b981;
 }
-
 
 .net-vm-docker {
   border-color: #6366f1;
@@ -1242,7 +1183,6 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
 }
-
 
 .net-connector {
   display: flex;
@@ -1323,9 +1263,6 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Resume Section
---------------------------------------------------------------*/
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
@@ -1385,8 +1322,7 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-
-.dl-btn {
+.btn-download-cv {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1401,19 +1337,18 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-.dl-btn:hover {
+.btn-download-cv:hover {
   background: transparent;
   color: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 180, 216, 0.3);
 }
 
-.dl-btn i {
+.btn-download-cv i {
   font-size: 18px;
 }
 
-
-.open-btn {
+.btn-view-cv {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1428,26 +1363,25 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-.open-btn:hover {
+.btn-view-cv:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 180, 216, 0.3);
 }
 
-.open-btn i {
+.btn-view-cv i {
   font-size: 18px;
 }
 
-
-.cv-box {
+.cv-viewer-card {
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   border-radius: 12px;
   padding: 30px;
 }
 
-.cv-box h3 {
+.cv-viewer-card h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1457,28 +1391,25 @@ section,
   gap: 10px;
 }
 
-.cv-box h3 i {
+.cv-viewer-card h3 i {
   color: #ef4444;
   font-size: 24px;
 }
 
-.cv-frame {
+.cv-pdf-embed {
   background: #1a1a2e;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.cv-btns {
+.cv-actions {
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
@@ -1581,9 +1512,6 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
-/*--------------------------------------------------------------
-# Portfolio Details Section (keep for compatibility)
---------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1642,9 +1570,6 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-/*--------------------------------------------------------------
-# Custom Scrollbar (Tech feel)
---------------------------------------------------------------*/
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -1662,9 +1587,6 @@ section,
   background: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Selection Color
---------------------------------------------------------------*/
 ::selection {
   background: color-mix(in srgb, var(--accent-color), transparent 70%);
   color: var(--contrast-color);
